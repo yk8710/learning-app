@@ -9,9 +9,9 @@
 <body>
   <h1>つぶやきを編集する<h1>
   <div>
-    <a href="{{ route('tweet.index' }}">< 戻る</a>
+    <a href="{{ route('tweet.index') }}">< 戻る</a>
     <p>投稿フォーム</p>
-    <form action="{{ route('tweet.update.put', [tweetId' => $tweet->id]) }}" method="post">
+    <form action="{{ route('tweet.update.put', ['tweetId' => $tweet->id]) }}" method="post">
       @method('PUT')
       @csrf
       <label for="tweet-content">つぶやき</label>
